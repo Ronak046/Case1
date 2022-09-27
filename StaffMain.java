@@ -50,13 +50,13 @@ public class StaffMain {
 				continue;
 			}
 			Applicant a=new Applicant(name,ms1,ms2,ms3,0.0,0.0);
+			a.setId(++id);
 			Double total=totalCalculation(a);
 			Double percentage=percentageCalculation(total);
 			a.setTotal(total);
 			a.setPercentage(percentage);
 			if (total==0.0 || percentage<=70)
 				continue;
-			a.setId(++id);
 			applicantList.add(a);
 	}
 		System.out.println("Output format");
